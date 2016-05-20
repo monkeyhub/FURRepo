@@ -59,8 +59,10 @@
       <list n="technologyScope">
          <string v="Java"/>
          <string v="ADFbc"/>
+         <string v="Ant"/>
       </list>
    </hash>
+   <hash n="oracle.jdeveloper.compiler.ant.AntConfiguration"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="internalEncoding" v="Cp1252"/>
       <list n="Javac.commandline.optionlist">

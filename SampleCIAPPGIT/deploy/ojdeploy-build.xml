@@ -1,0 +1,9 @@
+<?xml version = '1.0' standalone = 'yes' ?>
+<ojdeploy-build>
+  <deploy>
+    <parameter name="workspace" value="C:\keste\SampleCIAPPGIT\SampleCIAPPGIT.jws"/>
+    <parameter name="profile" value="*"/>
+    <parameter name="nocompile" value="false"/>
+    <parameter name="outputfile" value="C:\keste\SampleCIAPPGIT\deploy\${profile.name}"/>
+  </deploy>
+</ojdeploy-build>

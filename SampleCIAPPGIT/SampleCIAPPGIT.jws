@@ -1,5 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <hash n="adrs-workspace-properties">
+      <value n="adrs-instance-binding" v="DefaultServer"/>
+   </hash>
+   <url n="application-source-directory" path="src/"/>
    <value n="appTemplateId" v="adfWebappApplicationTemplate"/>
    <hash n="component-versions">
       <value n="oracle.adf.share.dt.migration.jps.JaznCredStoreMigratorHelper" v="11.1.1.1.0"/>
@@ -13,15 +17,13 @@
       <value n="oracle.mds.internal.dt.ide.migrator.MDSConfigMigratorHelper" v="11.1.1.0.5313"/>
    </hash>
    <list n="listOfChildren">
+      <hash><url n="URL" path="JLibs/JLibs.jpr"/></hash>
       <hash><url n="URL" path="Model/Model.jpr"/></hash>
       <hash><url n="URL" path="ViewController/ViewController.jpr"/></hash>
    </list>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
-      <hash n="DefaultProfile">
-         <value n="ProfileName" v="SampleCIAPPGIT_application1"/>
-      </hash>
       <hash n="profileDefinitions">
-         <hash n="SampleCIAPPGIT_application1">
+         <hash n="SampleCIApp">
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
@@ -30,12 +32,13 @@
                   <hash>
                      <value n="adapterClass" v="oracle.jdevimpl.deploy.common.DefaultProfileDependable"/>
                      <url n="ownerURL" path="ViewController/ViewController.jpr"/>
-                     <value n="profileName" v="SampleCIAPPGIT_ViewController_webapp1"/>
+                     <value n="pathInEar" v=""/>
+                     <value n="profileName" v="SampleCIApp"/>
                   </hash>
                </list>
             </hash>
-            <url n="earURL" path="deploy/SampleCIAPPGIT_application1.ear"/>
-            <value n="enterpriseAppName" v="SampleCIAPPGIT_application1"/>
+            <url n="earURL" path="deploy/SampleCIApp.ear"/>
+            <value n="enterpriseAppName" v="SampleCIApp"/>
             <hash n="fileGroups">
                <list n="groups">
                   <hash>
@@ -70,11 +73,11 @@
                <value n="IncludeLibrariesFromOtherContainers" v="true"/>
             </hash>
             <value n="profileClass" v="oracle.jdeveloper.deploy.ear.EarProfile"/>
-            <value n="profileName" v="SampleCIAPPGIT_application1"/>
+            <value n="profileName" v="SampleCIApp"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="SampleCIAPPGIT_application1"/>
+         <string v="SampleCIApp"/>
       </list>
    </hash>
 </jws:workspace>

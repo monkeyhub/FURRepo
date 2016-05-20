@@ -1,5 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <jpr:project xmlns:jpr="http://xmlns.oracle.com/ide/project">
+   <hash n="be.cronos.jdev.libsforant.options">
+      <value n="output.file.location" v=""/>
+   </hash>
    <hash n="component-versions">
       <value n="oracle.adfdt.controller.adfc.source.migration.AdfControllerSchemaMigrator" v="11.1.1.1.0"/>
       <value n="oracle.adfdt.controller.common.migrator.ProjectMigrator" v="11.1.1.1.0"/>
@@ -73,8 +76,10 @@
          <string v="ADFc"/>
          <string v="HTML"/>
          <string v="ADF_FACES"/>
+         <string v="Ant"/>
       </list>
    </hash>
+   <hash n="oracle.jdeveloper.compiler.ant.AntConfiguration"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="internalEncoding" v="Cp1252"/>
       <list n="Javac.commandline.optionlist">
@@ -91,7 +96,7 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="SampleCIAPPGIT_ViewController_webapp1">
+         <hash n="SampleCIApp">
             <hash n="appletArchives"/>
             <hash n="appletFiles">
                <value n="autoInclude" v="true"/>
@@ -102,8 +107,8 @@
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
-            <url n="earURL" path="deploy/SampleCIAPPGIT_ViewController_webapp1.ear"/>
-            <value n="enterpriseAppName" v="SampleCIAPPGIT_ViewController_webapp1"/>
+            <url n="earURL" path="deploy/SampleCIApp.ear"/>
+            <value n="enterpriseAppName" v="SampleCIApp"/>
             <hash n="fileGroups">
                <list n="groups">
                   <hash>
@@ -151,21 +156,21 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/SampleCIAPPGIT_ViewController_webapp1.war"/>
+            <url n="jarURL" path="deploy/SampleCIApp.war"/>
             <hash n="libraryDependencies">
                <value n="IncludeLibrariesFromOtherContainers" v="true"/>
             </hash>
             <value n="profileClass" v="oracle.jdeveloper.deploy.war.WarProfile"/>
-            <value n="profileName" v="SampleCIAPPGIT_ViewController_webapp1"/>
+            <value n="profileName" v="SampleCIApp"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="SampleCIAPPGIT_ViewController_webapp1"/>
+         <string v="SampleCIApp"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="SampleCIAPPGIT-ViewController-webapp"/>
-      <value n="j2eeWebContextRoot" v="SampleCIAPPGIT-ViewController-context-root"/>
+      <value n="j2eeWebAppName" v="sampleapp"/>
+      <value n="j2eeWebContextRoot" v="sampleapp"/>
    </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
@@ -260,6 +265,10 @@
             <value n="id" v="Oracle Page Templates"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -340,6 +349,10 @@
          </hash>
          <hash>
             <value n="id" v="Oracle Page Templates"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

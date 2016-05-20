@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<project name="JLibs" default="" basedir=".">
+  <dirname property="JLibs.basedir" file="${ant.file.JLibs}"/>
+  <path id="JLibs.srcpath">
+    <pathelement location="${JLibs.basedir}C:\keste\SampleCIAPPGIT\JLibs\src"/>
+  </path>
+  <!-- to accommodate the Ant copy/fileset element in "Apache Ant version 1.6.5 compiled on June 2 2005" bundled with JDeveloper 10.1.3.2 -->
+  <property name="JLibs.srcpath.first" value="${JLibs.basedir}C:\keste\SampleCIAPPGIT\JLibs\src"/>
+  <property name="JLibs.outputdir" value="${JLibs.basedir}/classes"/>
+  <path id="JLibs.library.ADF.Model.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.idm_11.1.1/identitystore.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adfm.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/groovy-all-2.0.5.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adftransactionsdt.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/adf-dt-at-rt.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adfdt_common.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adflibrary.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xmlparserv2.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/db-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/jdev-cm.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.ldap_11.1.1/ojmisc.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/commons-el.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/jsp-el-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/oracle-el.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.security_11.1.1/adf-share-security.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.security_11.1.1/adf-controller-security.jar"/>
+    <pathelement location="../JLibs/modules/javax.activation_1.1.0.0_1-1.jar"/>
+  </path>
+  <path id="JLibs.library.BC4J.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adf-share-support.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-base.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adflogginghandler.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adfsharembean.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jmx_11.1.1/jmxframework.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jmx_11.1.1/jmxspi.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.idm_11.1.1/identitystore.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adfm.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/bc4j-mbeans.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/bc4jwizard.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/groovy-all-2.0.5.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xmlparserv2.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/db-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/jdev-cm.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.ldap_11.1.1/ojmisc.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/commons-el.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/jsp-el-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/oracle-el.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.javatools_11.1.1/resourcebundle.jar"/>
+    <pathelement location="../JLibs/modules/javax.activation_1.1.0.0_1-1.jar"/>
+    <pathelement location="../JLibs/modules/javax.mail_1.1.0.0_1-4-1.jar"/>
+  </path>
+  <path id="JLibs.library.BC4J.Security">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.ldap_11.1.1/ldapjclnt11.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-common.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-ee.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-internal.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-unsupported-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-manifest.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jacc-spi.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.pki_11.1.1/oraclepki.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.osdt_11.1.1/osdt_core.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.osdt_11.1.1/osdt_cert.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.osdt_11.1.1/osdt_xmlsec.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.osdt_11.1.1/osdt_ws_sx.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.iau_11.1.1/fmw_audit.jar"/>
+    <pathelement location="../JLibs/modules/javax.security.jacc_1.0.0.0_1-1.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.idm_11.1.1/identitystore.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adf-share-support.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-base.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.security_11.1.1/adf-share-security.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xmlparserv2.jar"/>
+    <pathelement location="../JLibs/modules/javax.activation_1.1.0.0_1-1.jar"/>
+  </path>
+  <path id="JLibs.library.BC4J.Tester">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jdbc_11.1.1/ojdbc6dms.jar"/>
+    <pathelement location="../JLibs/jdeveloper/BC4J/jlib/bc4jtester.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jps_11.1.1/jps-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adflogginghandler.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adfm-debugger.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/db-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/bc4jwizard.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/jdev-cm.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xmlparserv2.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/regexp.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.help_5.0/ohj.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.help_5.0/help-share.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.bali.share_11.1.1/share.jar"/>
+    <pathelement location="../JLibs/jdeveloper/jlib/jewt4.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.help_5.0/oracle_ice.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.ldap_11.1.1/ojmisc.jar"/>
+    <pathelement location="../JLibs/jdeveloper/ide/lib/idert.jar"/>
+    <pathelement location="../JLibs/jdeveloper/ide/lib/javatools.jar"/>
+    <pathelement location="../JLibs/wlserver_10.3/server/lib/weblogic.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jmx_11.1.1/jmxframework.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jmx_11.1.1/jmxspi.jar"/>
+    <pathelement location="../JLibs/jdeveloper/BC4J/jlib/jpda-examples-1.6.0_21.jar"/>
+  </path>
+  <path id="JLibs.library.MDS.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.mds_11.1.1/mdsrt.jar"/>
+  </path>
+  <path id="JLibs.library.MDS.Runtime.Dependencies">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.mds_11.1.1/oramds.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adf-share-support.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adflogginghandler.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-base.jar"/>
+    <pathelement location="../JLibs/modules/javax.servlet_1.0.0.0_2-5.jar"/>
+    <pathelement location="../JLibs/modules/javax.jsp_1.2.0.0_2-1.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jdbc_11.1.1/ojdbc6dms.jar"/>
+    <pathelement location="../JLibs/oracle_common/jlib/commons-cli-1.0.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/commons-el.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/jsp-el-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/oracle-el.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.bali.share_11.1.1/share.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xmlef_11.1.1/xmlef.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.dms_11.1.1/dms.jar"/>
+    <pathelement location="../JLibs/modules/javax.activation_1.1.0.0_1-1.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xml.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xmlparserv2.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.javacache_11.1.1/cache.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.ucp_11.1.0.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.odl_11.1.1/ojdl.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.javatools_11.1.1/javatools-nodeps.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jmx_11.1.1/jmxframework.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jmx_11.1.1/jmxspi.jar"/>
+    <pathelement location="../JLibs/modules/javax.management_1.2.1.jar"/>
+    <pathelement location="../JLibs/modules/javax.management.j2ee_1.0.jar"/>
+  </path>
+  <path id="JLibs.library.Oracle.JDBC">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jdbc_11.1.1/ojdbc6dms.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.nlsrtl_11.1.0/orai18n.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.odl_11.1.1/ojdl.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.dms_11.1.1/dms.jar"/>
+  </path>
+  <path id="JLibs.library.Resource.Bundle.Support">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.javatools_11.1.1/resourcebundle.jar"/>
+  </path>
+  <path id="JLibs.library.Resource.Bundle.Variable.Resolver">
+    <pathelement location="../JLibs/jdeveloper/jlib/bundleresolver.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Page.Flow.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.pageflow_11.1.1/adf-pageflow-impl.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.pageflow_11.1.1/adf-pageflow-dtrt.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.pageflow_11.1.1/adf-pageflow-fwk.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.pageflow_11.1.1/adf-pageflow-rc.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Controller.Schema">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adf-controller-schema.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.DVT.Faces.Databinding.MDS.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/dvt-databindings-mds.jar"/>
+  </path>
+  <path id="JLibs.library.Oracle.Page.Templates">
+    <pathelement location="../JLibs/modules/oracle.adf.view_11.1.1/oracle-page-templates.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Common.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adf-share-support.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-ca.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-base.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adfsharembean.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share_11.1.1/adflogginghandler.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.idm_11.1.1/identitystore.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.javacache_11.1.1/cache.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.security_11.1.1/adf-share-security.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.security_11.1.1/adf-controller-security.jar"/>
+    <pathelement location="../JLibs/modules/javax.activation_1.1.0.0_1-1.jar"/>
+  </path>
+  <path id="JLibs.library.BC4J.Oracle.Domains">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adfm.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Common.Web.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adflibfilter.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.share.ca_11.1.1/adf-share-base.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.javatools_11.1.1/javatools-nodeps.jar"/>
+  </path>
+  <path id="JLibs.library.Commons.Collections.3.1">
+    <pathelement location="../JLibs/modules/com.bea.core.apache.commons.collections_3.2.0.jar"/>
+  </path>
+  <path id="JLibs.library.Commons.Beanutils.1.6">
+    <pathelement location="../JLibs/oracle_common/modules/org.apache.commons.beanutils_1.6.jar"/>
+  </path>
+  <path id="JLibs.library.Commons.Logging.1.0.4">
+    <pathelement location="../JLibs/oracle_common/modules/org.apache.commons.logging_1.0.4.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Web.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/adfmweb.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Faces.Runtime.11">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/trinidad-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/trinidad-impl.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/adf-richclient-api-11.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/adf-richclient-impl-11.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.Controller.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.controller_11.1.1/adf-controller.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.controller_11.1.1/adf-controller-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.controller_11.1.1/adf-controller-rt-common.jar"/>
+  </path>
+  <path id="JLibs.library.JSF.1.2">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jsf_1.2.9/glassfish.jsf_1.0.0.0_1-2-15.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jsf_1.2.9/glassfish.jstl_1.2.0.1.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jsf_1.2.9/javax.jsf_1.1.0.0_1-2.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jsf_1.2.9/wls.jsf.di.jar"/>
+  </path>
+  <path id="JLibs.library.JSTL.1.2">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.jsf_1.2.9/glassfish.jstl_1.2.0.1.jar"/>
+  </path>
+  <path id="JLibs.library.Trinidad.Runtime.11">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/trinidad-api.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/trinidad-impl.jar"/>
+  </path>
+  <path id="JLibs.library.JSP.Runtime">
+    <pathelement location="../JLibs/modules/javax.servlet_1.0.0.0_2-5.jar"/>
+    <pathelement location="../JLibs/modules/javax.jsp_1.2.0.0_2-1.jar"/>
+    <pathelement location="../JLibs/modules/glassfish.el_1.0.0.0_2-1.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.DVT.Faces.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/dvt-utils.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/dvt-jclient.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/dvt-trinidad.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/dvt-faces.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-anim.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-awt-util.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-bridge.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-codec.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-css.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-dom.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-extension.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-ext.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-gui-util.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-gvt.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-parser.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-script.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-svg-dom.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-svggen.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-swing.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-transcoder.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-util.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/batik-xml.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/xml-apis-ext.jar"/>
+  </path>
+  <path id="JLibs.library.ADF.DVT.Faces.Databinding.Runtime">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/dvt-databindings.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.view_11.1.1/dvt-facesbindings.jar"/>
+  </path>
+  <path id="JLibs.library.Oracle.JEWT">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.bali.share_11.1.1/share.jar"/>
+    <pathelement location="../JLibs/jdeveloper/jlib/jewt4.jar"/>
+    <pathelement location="../JLibs/jdeveloper/jlib/inspect4.jar"/>
+  </path>
+  <path id="JLibs.library.Oracle.XML.Parser.v2">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xmlparserv2.jar"/>
+    <pathelement location="../JLibs/oracle_common/modules/oracle.xdk_11.1.0/xml.jar"/>
+  </path>
+  <path id="JLibs.library.JDeveloper.Runtime">
+    <pathelement location="../JLibs/jdeveloper/jdev/lib/jdev-rt.jar"/>
+  </path>
+  <path id="JLibs.library.SQLJ.Runtime">
+    <pathelement location="../JLibs/jdeveloper/sqlj/lib/runtime12.jar"/>
+  </path>
+  <path id="JLibs.library.Connection.Manager">
+    <pathelement location="../JLibs/oracle_common/modules/oracle.adf.model_11.1.1/jdev-cm.jar"/>
+  </path>
+  <path id="JLibs.classpath">
+    <path refid="JLibs.library.ADF.Model.Runtime"/>
+    <path refid="JLibs.library.BC4J.Runtime"/>
+    <path refid="JLibs.library.BC4J.Security"/>
+    <path refid="JLibs.library.BC4J.Tester"/>
+    <path refid="JLibs.library.MDS.Runtime"/>
+    <path refid="JLibs.library.MDS.Runtime.Dependencies"/>
+    <path refid="JLibs.library.Oracle.JDBC"/>
+    <path refid="JLibs.library.Resource.Bundle.Support"/>
+    <path refid="JLibs.library.Resource.Bundle.Variable.Resolver"/>
+    <path refid="JLibs.library.ADF.Common.Runtime"/>
+    <path refid="JLibs.library.BC4J.Oracle.Domains"/>
+    <path refid="JLibs.library.ADF.Common.Web.Runtime"/>
+    <path refid="JLibs.library.Commons.Collections.3.1"/>
+    <path refid="JLibs.library.Commons.Beanutils.1.6"/>
+    <path refid="JLibs.library.Commons.Logging.1.0.4"/>
+    <path refid="JLibs.library.ADF.Web.Runtime"/>
+    <path refid="JLibs.library.ADF.Faces.Runtime.11"/>
+    <path refid="JLibs.library.ADF.Controller.Runtime"/>
+    <path refid="JLibs.library.JSF.1.2"/>
+    <path refid="JLibs.library.JSTL.1.2"/>
+    <path refid="JLibs.library.Trinidad.Runtime.11"/>
+    <path refid="JLibs.library.JSP.Runtime"/>
+    <path refid="JLibs.library.ADF.DVT.Faces.Runtime"/>
+    <path refid="JLibs.library.ADF.DVT.Faces.Databinding.Runtime"/>
+    <path refid="JLibs.library.Oracle.JEWT"/>
+    <path refid="JLibs.library.Oracle.XML.Parser.v2"/>
+    <path refid="JLibs.library.JDeveloper.Runtime"/>
+    <path refid="JLibs.library.SQLJ.Runtime"/>
+    <path refid="JLibs.library.Connection.Manager"/>
+  </path>
+</project>
